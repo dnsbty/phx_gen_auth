@@ -84,14 +84,10 @@ and a new `MyApp.Accounts` [context][phoenix contexts guide], in the application
 namespace.
 
 Verify the database connection details for the development and test environments in `config/`
-so the migrator and tests can run properly. Then run the following to create the database
-
-    $ mix ecto.create
-
-Next, let's install the dependencies and migrate the database
+so the migrator and tests can run properly. Then run the following to install the dependencies and create and migrate the database
 
     $ mix deps.get
-    $ mix ecto.migrate
+    $ mix do ecto.create, ecto.migrate
 
 Let's run the tests and make sure our new authentication system works as
 expected.
